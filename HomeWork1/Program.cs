@@ -1,4 +1,4 @@
-﻿ // Задача 1: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
+﻿// Задача 1: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
 
 Console.WriteLine("Введите первое число: ");
 int numberA = int.Parse(Console.ReadLine());
@@ -33,4 +33,23 @@ if (number3 > max);
 Console.WriteLine($"Максмальное число из введённых -> {max} ");
 
 
+//Задача 3: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+
+Console.WriteLine("Введите число: ");
+int i = int.Parse(Console.ReadLine());
+int temp = i % 2;
+bool result = temp == 0;
+if (result)
+{
+    Console.WriteLine($"Нечетное число {i} ");
+    Console.ReadLine();
+    return;
+}
+else
+{
+    Console.WriteLine($"Четное число {i} ");
+    Console.ReadLine ();
+    return;
+}
+ 
 
