@@ -14,3 +14,23 @@ else
 {
     Console.WriteLine($"Второе число {numberB} больше чем первое {numberA} ");
 }
+//Задача 2: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
+Console.WriteLine("Введите 3 числа: ");
+int number1 = int.Parse(Console.ReadLine());
+int number2 = int.Parse(Console.ReadLine());
+int number3 = int.Parse(Console.ReadLine());
+
+int max = number1;
+
+if (number2 > max);
+{
+    number2 = max;
+}
+if (number3 > max);
+{
+    max = number3;
+}
+Console.WriteLine($"Максмальное число из введённых -> {max} ");
+
+
+
