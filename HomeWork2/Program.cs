@@ -22,7 +22,8 @@ string numOther = Convert.ToString(num);
 if(numOther.Length > 2) {
     Console.WriteLine($"Третья цифра: {numOther[2]} ");
 }
-else {
+else 
+{
 
     Console.WriteLine($"Третьей цифры нет ");
 }
