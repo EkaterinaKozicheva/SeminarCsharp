@@ -24,7 +24,6 @@ if(numOther.Length > 2) {
 }
 else 
 {
-
     Console.WriteLine($"Третьей цифры нет ");
 }
 
