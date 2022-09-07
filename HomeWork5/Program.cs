@@ -120,7 +120,7 @@ void МахMin(int[] array)
     Console.WriteLine($"всего {array.Length} чисел. Максимальное значение = {max}, минимальное значение = {min}");
     Console.WriteLine($"Разница между максимальным и минимальным значением = {max - min}");
 }
-int size = new Random().Next(2, 30);
+int size = new Random().Next(2, 20);
 int[] array = RandomArray(size);
 GetArray(array);
 Console.WriteLine();
