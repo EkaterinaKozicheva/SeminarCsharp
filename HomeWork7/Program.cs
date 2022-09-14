@@ -119,8 +119,6 @@ for (int j = 0; j < numbers.GetLength(1); j++)
 Console.WriteLine();
 PrintArray(numbers);
 
-
-
 void RandomNumbers(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
