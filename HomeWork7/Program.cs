@@ -29,8 +29,8 @@
 // Console.Write("Введите число m: ");
 // int rows = Convert.ToInt32(Console.ReadLine());
 // Console.Write("Введите число n: ");
-// int cols = Convert.ToInt32(Console.ReadLine());
-// double[,] array = GetArray(rows, cols);
+// int column = Convert.ToInt32(Console.ReadLine());
+// double[,] array = GetArray(rows, column);
 // ShowArray(array);
 
 
@@ -44,16 +44,16 @@
 // 8 4 2 4
 // 17 -> такого числа в массиве нет
 
-Console.WriteLine("Введите номер строки: ");
+Console.WriteLine("введите номер строки: ");
 int n = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите номер столбца: ");
+Console.WriteLine("введите номер столбца: ");
 int m = Convert.ToInt32(Console.ReadLine());
 int[,] numbers = new int[10, 10];
 RandomNumbers(numbers);
 
 if (n > numbers.GetLength(0) || m > numbers.GetLength(1))
 {
-    Console.WriteLine("Такого элемента нет");
+    Console.WriteLine("Такого элемента в массиве нет");
 }
 else
 {
@@ -83,10 +83,9 @@ void PrintArray(int[,] array)
             Console.Write(array[i, j] + " ");
         }
         Console.Write("]");
-         Console.WriteLine("");
+        Console.WriteLine("");
     }
 }
-
 
 //===============Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 
@@ -96,52 +95,40 @@ void PrintArray(int[,] array)
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-// Console.WriteLine("введите количество строк");
-// int n = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("введите количество столбцов");
-// int m = Convert.ToInt32(Console.ReadLine());
-
-// int[,] numbers = new int[n, m];
-// FillArrayRandomNumbers(numbers);
-
-
-// for (int j = 0; j < numbers.GetLength(1); j++)
+// int[,] RandomArray(int rows, int column)
 // {
-//     double avarage = 0;
-//     for (int i = 0; i < numbers.GetLength(0); i++)
-//     {
-//         avarage = (avarage + numbers[i, j]);
-//     }
-//     avarage = avarage / n;
-//     Console.Write(avarage + "; ");
-// }
-// Console.WriteLine();
-// PrintArray(numbers);
-
-
-
-// void FillArrayRandomNumbers(int[,] array)
-// {
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < array.GetLength(1); j++)
-//         {
+//     int[,] array = new int[rows, column];
+//     for (int i = 0; i < rows; i++)
+//         for (int j = 0; j < column; j++)
 //             array[i, j] = new Random().Next(0, 10);
-//         }
-//     }
+//     return array;
 // }
 
-// void PrintArray(int[,] array)
+// void GetArray(int[,] array)
 // {
-
 //     for (int i = 0; i < array.GetLength(0); i++)
 //     {
-//         Console.Write("[ ");
 //         for (int j = 0; j < array.GetLength(1); j++)
 //         {
 //             Console.Write(array[i, j] + " ");
 //         }
-//         Console.Write("]");
-//         Console.WriteLine("");
+//         Console.WriteLine();
 //     }
+// }
+
+// Console.Write("Ввведите количество строк: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Ввведите количество столбцов: ");
+// int column = Convert.ToInt32(Console.ReadLine());
+// int[,] array = RandomArray(rows, column);
+// GetArray(array);
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     double sum = 0;
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         sum += array[i, j];
+//     }
+//     Console.Write($"Cреднее арифметическое элементов в {i} столбце = {sum / rows}");
+//     Console.WriteLine();
 // }
