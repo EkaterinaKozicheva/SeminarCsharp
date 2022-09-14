@@ -105,7 +105,6 @@ int m = Convert.ToInt32(Console.ReadLine());
 int[,] numbers = new int[n, m];
 RandomNumbers(numbers);
 
-
 for (int j = 0; j < numbers.GetLength(1); j++)
 {
     double med = 0;
@@ -132,7 +131,6 @@ void RandomNumbers(int[,] array)
 
 void PrintArray(int[,] array)
 {
-
     for (int i = 0; i < array.GetLength(0); i++)
     {
         Console.Write("[ ");
